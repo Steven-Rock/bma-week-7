@@ -1,45 +1,48 @@
 /**
  * 
  */
-package com.swr.tidynotes;
+package com.swr.tidynotes.note;
 
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.UUID;
-
 
 /**
  * @author steve
  *
  */
-public class Note extends ANote {
-		
-	public Note(String name, String note) {
+public class Task extends ATask {
+	
+	public Task(String name, String note, Date dueDate) {
 		super();
 		setName(name);
 		setNote(note);
 		setGuid(UUID.randomUUID());
 		setLastModifiedDate(GregorianCalendar.getInstance().getTime());
 		setCreateDate(GregorianCalendar.getInstance().getTime());
+		setCompleted(false);
 		setDirty(true);
-		
+		setDueDate(dueDate);
 	}
 
-	public Note() {
+	public Task() {
 		super();
 		setGuid(UUID.randomUUID());
 		setLastModifiedDate(GregorianCalendar.getInstance().getTime());
 		setCreateDate(GregorianCalendar.getInstance().getTime());
-		setDirty(true);			
+		setCompleted(false);
+		setDirty(true);
 	}
 
 	@Override
 	public String toString() {
-		return "Note [aNote()=" + super.toString() + ", isDirty()="
-				+ isDirty() + ", getGuid()=" + getGuid() + ", getName()="
-				+ getName() + ", getNote()=" + getNote()
+		return "Task [getDueDate()=" + getDueDate() + ", isCompleted()="
+				+ isCompleted() + ", getCompletedDate()="
+				+ getCompletedDate() + ", aNote()=" + super.toString()
+				+ ", isDirty()=" + isDirty() + ", getGuid()=" + getGuid()
+				+ ", getName()=" + getName() + ", getNote()=" + getNote()
 				+ ", getLastModifiedDate()=" + getLastModifiedDate()
 				+ ", getCreateDate()=" + getCreateDate() + ", getClass()="
 				+ getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-		
 }

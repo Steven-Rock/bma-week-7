@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.swr.tidynotes;
+package com.swr.tidynotes.note;
 
 import java.util.Date;
 
