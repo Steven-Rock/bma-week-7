@@ -9,11 +9,13 @@ bma-week-7
                 Including a unique prefix is optional (com.crossfireconsulting for example)
                 The application prefix should be present.  Tasklist, todolist, todo, whatever...
             Its time we move to one class per file, so make each file live in its own class (anonymous and inner classes are obviously exceptions)
+        
         Implement a package called TaskFilter off of the application root package that will filter tasks 
             Implement the TaskFilter interface.  The most simple interface I can think of would be "public Task[] filter(Task[] tasks);"
             Implement at least one class that implements TaskFilter 
                 hint: you can bring in as much or as little data and behavior as long as you implement the public interface
                 hint: remember this involves by reference semantics.  You don't want to destroy the original collection of tasks
+        
         In Assignment.java
             Create a collection of Task objects representative of your hierarchy
             Create a collection of TaskFilter objects
