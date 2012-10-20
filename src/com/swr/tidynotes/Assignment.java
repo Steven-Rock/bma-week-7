@@ -38,6 +38,11 @@ public class Assignment {
 		Assignment a = new Assignment();
 		ATask[] tasks = a.generateTasks();
 		
+		for (int j = 0; j < tasks.length; j++) {				
+			System.out.println("All tasks = " + tasks[j].toString());				
+		}
+		
+		
 		// not sure why we need a collection of filters, one should handle it
 		
 		TaskFilter f = null;
