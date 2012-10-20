@@ -66,4 +66,34 @@ public class InterviewTask extends Task {
 	public void setInterviewerName(String interviewerName) {
 		this.interviewerName = interviewerName;
 	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof InterviewTask))
+			return false;
+		InterviewTask other = (InterviewTask) obj;
+		if (contactNumber == null) {
+			if (other.contactNumber != null)
+				return false;
+		} else if (!contactNumber.equals(other.contactNumber))
+			return false;
+		if (interviewerName == null) {
+			if (other.interviewerName != null)
+				return false;
+		} else if (!interviewerName.equals(other.interviewerName))
+			return false;
+		if (phoneInterview != other.phoneInterview)
+			return false;
+		return true;
+	}
+	
+	
 }

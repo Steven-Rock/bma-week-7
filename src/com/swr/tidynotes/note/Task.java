@@ -34,15 +34,5 @@ public class Task extends ATask {
 		setDirty(true);
 	}
 
-	@Override
-	public String toString() {
-		return "Task [getDueDate()=" + getDueDate() + ", isCompleted()="
-				+ isCompleted() + ", getCompletedDate()="
-				+ getCompletedDate() + ", aNote()=" + super.toString()
-				+ ", isDirty()=" + isDirty() + ", getGuid()=" + getGuid()
-				+ ", getName()=" + getName() + ", getNote()=" + getNote()
-				+ ", getLastModifiedDate()=" + getLastModifiedDate()
-				+ ", getCreateDate()=" + getCreateDate() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + "]";
-	}
+
 }

@@ -46,5 +46,52 @@ public abstract class ATask extends Note {
 				+ getCreateDate() + ", getClass()=" + getClass()
 				+ ", hashCode()=" + hashCode() + "]";
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + (completed ? 1231 : 1237);
+		result = prime * result
+				+ ((completedDate == null) ? 0 : completedDate.hashCode());
+		result = prime * result + ((dueDate == null) ? 0 : dueDate.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (!(obj instanceof ATask))
+			return false;
+		ATask other = (ATask) obj;
+		if (completed != other.completed)
+			return false;
+		if (completedDate == null) {
+			if (other.completedDate != null)
+				return false;
+		} else if (!completedDate.equals(other.completedDate))
+			return false;
+		if (dueDate == null) {
+			if (other.dueDate != null)
+				return false;
+		} else if (!dueDate.equals(other.dueDate))
+			return false;
+		return true;
+	}
+
+	
+	
+	
+	
 	
 }

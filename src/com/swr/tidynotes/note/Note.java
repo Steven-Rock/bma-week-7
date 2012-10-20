@@ -31,15 +31,7 @@ public class Note extends ANote {
 		setCreateDate(GregorianCalendar.getInstance().getTime());
 		setDirty(true);			
 	}
-
-	@Override
-	public String toString() {
-		return "Note [aNote()=" + super.toString() + ", isDirty()="
-				+ isDirty() + ", getGuid()=" + getGuid() + ", getName()="
-				+ getName() + ", getNote()=" + getNote()
-				+ ", getLastModifiedDate()=" + getLastModifiedDate()
-				+ ", getCreateDate()=" + getCreateDate() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + "]";
-	}
+	
+	
 		
 }
